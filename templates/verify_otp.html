@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OTP Verification</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+
+            background:#f4f6f9;
+
+            height:100vh;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+        }
+
+        .container{
+
+            width:420px;
+
+            background:white;
+
+            padding:35px;
+
+            border-radius:12px;
+
+            box-shadow:0 0 20px rgba(0,0,0,0.1);
+        }
+
+        h2{
+
+            text-align:center;
+
+            margin-bottom:20px;
+
+            color:#333;
+        }
+
+        p{
+
+            text-align:center;
+
+            color:#666;
+
+            margin-bottom:20px;
+        }
+
+        .input-group{
+
+            margin-bottom:20px;
+        }
+
+        .input-group label{
+
+            display:block;
+
+            margin-bottom:6px;
+
+            color:#555;
+        }
+
+        .input-group input{
+
+            width:100%;
+
+            padding:12px;
+
+            border:1px solid #ccc;
+
+            border-radius:6px;
+
+            outline:none;
+
+            font-size:18px;
+
+            text-align:center;
+
+            letter-spacing:4px;
+        }
+
+        .input-group input:focus{
+
+            border-color:#007bff;
+        }
+
+        button{
+
+            width:100%;
+
+            padding:12px;
+
+            border:none;
+
+            border-radius:6px;
+
+            background:#007bff;
+
+            color:white;
+
+            font-size:16px;
+
+            cursor:pointer;
+        }
+
+        button:hover{
+
+            background:#0056b3;
+        }
+
+        .message{
+
+            text-align:center;
+
+            color:red;
+
+            margin-bottom:15px;
+        }
+
+        .security{
+
+            text-align:center;
+
+            margin-top:20px;
+
+            color:green;
+
+            font-size:14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>OTP Verification</h2>
+
+    <p>
+        A verification code has been sent to your registered email.
+    </p>
+
+    {% if error %}
+
+        <div class="message">
+
+            {{ error }}
+
+        </div>
+
+    {% endif %}
+
+    <form method="POST">
+
+        <div class="input-group">
+
+            <label>Enter OTP</label>
+
+            <input
+                type="text"
+                name="otp"
+                maxlength="6"
+                required>
+
+        </div>
+
+        <button type="submit">
+
+            Verify OTP
+
+        </button>
+
+    </form>
+
+    <div class="security">
+
+        🔒 VPN Login Verification Enabled
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+security.db
+.env
+logs/
+app.py.save

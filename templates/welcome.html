@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Dashboard</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+
+            background:#f4f6f9;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            height:100vh;
+        }
+
+        .dashboard{
+
+            width:600px;
+
+            background:white;
+
+            padding:40px;
+
+            border-radius:12px;
+
+            box-shadow:0 0 20px rgba(0,0,0,0.1);
+
+            text-align:center;
+        }
+
+        h1{
+
+            color:#333;
+
+            margin-bottom:15px;
+        }
+
+        .username{
+
+            color:#007bff;
+
+            font-weight:bold;
+        }
+
+        p{
+
+            color:#666;
+
+            margin-bottom:20px;
+        }
+
+        .status{
+
+            background:#e8f5e9;
+
+            color:#2e7d32;
+
+            padding:12px;
+
+            border-radius:8px;
+
+            margin-bottom:25px;
+        }
+
+        .features{
+
+            text-align:left;
+
+            margin-top:20px;
+
+            padding:20px;
+
+            background:#fafafa;
+
+            border-radius:8px;
+        }
+
+        .features ul{
+
+            margin-left:20px;
+        }
+
+        .features li{
+
+            margin-bottom:10px;
+        }
+
+        .logout-btn{
+
+            display:inline-block;
+
+            padding:12px 25px;
+
+            background:#dc3545;
+
+            color:white;
+
+            text-decoration:none;
+
+            border-radius:6px;
+
+            margin-top:20px;
+        }
+
+        .logout-btn:hover{
+
+            background:#c82333;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="dashboard">
+
+    <h1>
+        Welcome,
+        <span class="username">
+            {{ user }}
+        </span>
+    </h1>
+
+    <p>
+        You have successfully authenticated.
+    </p>
+
+    <div class="status">
+
+        🔒 Security Status: Protected
+
+    </div>
+
+    <div class="features">
+
+        <h3>Active Security Features</h3>
+
+        <ul>
+
+            <li>Session Authentication</li>
+
+            <li>Password Hashing (Bcrypt)</li>
+
+            <li>Failed Login Detection</li>
+
+            <li>TOR Exit Node Detection</li>
+
+            <li>VPN / Datacenter Detection</li>
+
+            <li>Suspicious User-Agent Detection</li>
+
+            <li>Apache Log Monitoring</li>
+
+            <li>IP Blocking Database</li>
+
+            <li>Email Alerting</li>
+
+        </ul>
+
+    </div>
+
+    <a href="/logout" class="logout-btn">
+
+        Logout
+
+    </a>
+
+</div>
+
+</body>
+</html>
